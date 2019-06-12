@@ -1,0 +1,293 @@
+html {
+    background-color: rgb(155, 186, 217);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* https://www.w3schools.com/w3css/w3css_buttons.asp*/
+/* https://www.w3schools.com/css/css_border.asp */
+.card button {
+    width: 10rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: rgb(155, 186, 217);
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0px;
+    transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+    background-color: rgb(24, 3, 23);
+}
+
+/*https://www.w3schools.com/css/css_dimension.asp */
+
+.card {
+    max-width: 50vw;
+    min-width: 360px;
+    margin: 0.5rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+}
+
+.card-anzeige {
+    max-width: 25vw;
+    min-width: 360px;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0px;
+    text-align: left;
+    border-style: solid;
+    border-color: black;
+    float: left;
+}
+
+.card-start{
+    max-width: 13vw;
+    margin: 0.5rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0px;
+    text-align: center;
+    float: left;
+    border-style: solid;
+    border-color: black;
+}
+
+.card-kiste {
+    max-width: 50vw;
+    min-width: 300px;
+    margin: 3rem auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.btn-group .button.button {
+    background-color: #9BBAD9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 63%;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none;
+}
+
+.btn-group .button:hover {
+  background-color: black;
+}
+
+/*https://www.w3schools.com/css/css_navbar.asp */
+/* https://www.w3schools.com/howto/howto_css_topnav_right.asp */
+
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+}
+  
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav .search-container {
+    float: left;
+}
+  
+  
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    border-style: solid;
+    border-color: black;
+}
+
+.topnav .search-container button {
+    float: left;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+    
+}
+  
+
+@media screen and (max-width: 600px) {
+.topnav a, .topnav input[type=text] {
+    float: none;
+}   
+.topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+}
+.topnav input[type=text] {
+    border: 1px solid #ccc;
+    }
+}
+
+.topnav button {
+    background-color: #9BBAD9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 15%;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: right;
+}
+
+
+/*https://www.w3schools.com/howto/howto_css_searchbar.asp */
+.topnav button:hover {
+    background-color: black;
+}
+.search-container{
+    width: 25%;
+}
+.search-container form {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 2px 30px;
+    width: 100%
+    
+}
+
+.border {
+  border-bottom: solid;
+  color: black;
+
+}
+
+.border2 {
+    border-style: solid;
+    color: black;
+    width: 75%
+
+}
+
+div.a {
+    font-size: 25px;
+    color: white;
+  }
+
+
+ /* https://www.w3schools.com/css/css3_object-fit.asp */
+.responsive-img,video.responsive-video{
+    max-width:60%;
+    height:auto;
+}
+
+input[type=text1], select, textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid;
+    border-radius: 0px;
+    resize: vertical;
+    border-style: solid;
+    border-color: black;
+    float: left;
+}
+  
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+  
+input[type=submit] {
+    background-color:#9BBAD9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    float: right;
+}
+  
+input[type=submit]:hover {
+    background-color: black;
+}
+  
+
+  
+.col-25 {
+    float: left;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float: left;
+    width: 120%;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+

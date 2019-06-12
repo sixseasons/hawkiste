@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link href="test.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <a href="/kiste">
+            <!-- https://www.w3schools.com/html/html_images.asp-->
+            <center><h1><img border="0" alt="HAW Kiste" src="HAW_Kiste_Logo.png" alt="HAW Kiste" width="260" height="80" align="middle"> </h1> </center>
+            </a>  
+        <div class="card">
+            <div class="headline">Login</div><br>
+
+            <% if (error) { %> 
+                <div class="error">Nutzername oder Passwort falsch.</div>
+            <% } %>
+
+            <form action="/login" method="POST">
+                <input type="text" name="nutzername" placeholder="Benutzername" required>
+
+                <input type="password" name="passwort" placeholder="Passwort" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+	<head>
+        <title>Neuer Artikel</title>
+        <link href="test.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	</head>
+	<body>
+        <br> <br> <br> <br>
+        <!--  https://www.w3schools.com/html/html_images.asp
+              https://github.com/bradtraversy/nodeuploads/blob/master/views/index.ejs
+        -->
+        <a href="/kiste">
+        <center><h1><img border="0" alt="HAW Kiste" src="HAW_Kiste_Logo.png" alt="HAW Kiste" width="260" height="80" align="middle"> </h1> </center>
+        </a>    
+        <div class="card">
+            <center> <div class="border2">
+                <br>
+            <%= typeof msg != 'undefined' ? msg : '' %>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="file-field input-field">
+                    <div class="btn grey">
+                    <span>Bild:</span>
+                    <input type="file" name="bild" accept="image/jpeg"> <br><br>
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+                <button type="submit" class="btn">Bild hochladen</button>
+            </form>
+            <br>
+            <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
+            <br>
+          </div>
+        </center>
+        
+
+        
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
+        
+        <br>
+
+
+            <form action="/anzeigeErstellen" method="POST">
+
+              <div class="container">
+
+                  <div class="row">
+
+                    <div class="col-25">
+                      <label for="titel">Titel der Anzeige</label>
+                    </div>
+
+                    <div class="col-75">
+                      <input type="text1" id="fname" placeholder="Titel der Anzeige" name="name">
+                    </div>
+
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="lname"> Preis</label>
+                    </div>
+
+                    <div class="col-75">
+                      <input type="text1" id="price" name="preis" placeholder="1,00">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="categorie">Kategorie</label>
+                    </div>
+
+                    <div class="col-75">
+                      <select id="categorie" name="kategorie">
+                        <option value="Dienstleistungen">Dienstleistungen</option>
+                        <option value="Elektronik">Elektronik</option>
+                        <option value="Fahrzeuge">Fahrzeuge</option>
+                        <option value="Immobilien">Immobilien</option>
+                        <option value="Jobs">Jobs</option>
+                        <option value="Kleidung">Kleidung</option>
+                        <option value="Möbel">Möbel</option>
+                        <option value="Musik/Filme/Bücher">Musik/Filme/Bücher</option>
+                        <option value="Tickets/Karten">Tickets/Karten</option>
+                        <option value="Tiere">Tiere</option>
+                        <option value="Zu Verschenken">Zu Verschenken</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                        <div class="col-25">
+                          <label for="place">Ort</label>
+                        </div>
+
+                        <div class="col-75">
+                          <select id="place" name="ort">
+                            <option value="Armgartstraße">Armgartstraße</option>
+                            <option value="Bergedorf">Bergedorf</option>
+                            <option value="Berliner Tor">Berliner Tor</option>
+                            <option value="Finkenau">Finkenau</option>
+                          </select>
+                        </div>
+                  </div>
+
+                  <div class="row">
+
+                      <div class="col-25">
+                        <label for="titel">E-Mail-Adresse zur Kontaktaufnahme</label>
+                      </div>
+  
+                      <div class="col-75">
+                        <input type="text1" id="fname" placeholder="max@mustermann.de" name="email">
+                      </div>
+                    </div>
+
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="Artikelbeschreibung">Artikelbeschreibung</label>
+                    </div>
+
+                    <div class="col-75">
+                      <textarea id="Artikelbeschreibung" name="beschreibung" placeholder="Ich verkaufe..." style="height:200px" ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <br>
+                      <button type="submit" value="upload">Anzeige schalten</button>
+                  </div>
+                  
+                </form>
+              </div>
+            </form>
+        </div>
+    
+
+
+ 
+	</body>
+</html>
