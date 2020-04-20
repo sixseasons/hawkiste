@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HAW Kiste - Von und für Studenten der HAW</title>
+        <link href="test.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+        <a href="/kiste">
+        <!-- https://www.w3schools.com/html/html_images.asp-->
+        <h1><img src="HAW_Kiste_Logo.png" alt="HAW Kiste" width="260" height="80" align="middle"></h1>
+        </a>  
+       <!-- https://www.w3schools.com/howto/howto_css_topnav_right.asp-->
+        <div class="topnav">
+
+            <% { %>
+                <form action="/anzeigeErstellen" method="GET">
+                    <button type="submit">Anzeige aufgeben</button>
+                </form>
+            <% } %>
+            
+            <% if (isLoggedIn) { %>
+                <form action="/logout" method="POST">
+                    <button type="submit">Abmelden</button>
+                </form>
+            <% } else { %>
+                <form action="/login" method="GET">
+                    <button type="submit">Anmelden</button>
+                </form>
+                <form action="/register" method="GET">
+                    <button type="submit">Registrieren</button>
+                </form>
+                <% } %>
+
+<!-- /*https://www.w3schools.com/howto/howto_css_searchbar.asp */-->
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Wonach suchst du?" name="search">
+                </form>
+            </div>
+        </div>   
+             
+        <br> <br> <br>
+        <div class="btn-group">
+            <div class="card-start">
+                <a href="/fahrzeuge" class="button">Fahrzeuge</a>
+                <a href="/immobilien" class="button">Immobilien</a>
+                <a href="/dienstleistungen" class="button">Dienstleistungen</a>
+                <a href="/jobs" class="button">Jobs</a>
+                <a href="/tiere" class="button">Tiere</a>
+                <a href="/kleidung" class="button">Kleidung</a>
+                <a href="/moebel" class="button">Möbel</a>
+                <a href="/elektronik" class="button">Elektronik</a>
+                <a href="/musikFilmeBuecher" class="button">Musik/Filme/Bücher</a>
+                <a href="/ticketsKarten" class="button">Tickets/Karten</a>
+                <a href="/zuVerschenken" class="button">Zu verschenken</a>
+            </div>
+        </div>
+        <center>
+            <div class="a">
+                Neuste Anzeigen
+            </div>
+        </center> 
+        <div class="border">
+
+        </div>
+        <!-- https://de.kisspng.com/free/icon-5.html-->
+        <img src="kiste.png" alt="kiste" width="500px" height="500px" align="right">
+        <div class="anzeigen">
+            <div class="card-anzeige">
+                    <table>
+                            <% for(var i = 0; i < list.length; i++) { %>
+                                <tr>
+                                         <td>            <div class="border">
+
+                                        </div>    <br><b> <center><%= list[i].name %></td></b> </center>
+                                </tr>
+                                <tr>
+                                    <td>für <%= list[i].preis %>€</td>
+                                </tr>
+                                <tr>
+                                    <td><%= list[i].beschreibung %></td>
+                                </tr>
+                                <tr>
+                                    <td>Wo?: <%= list[i].ort %></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Melde dich unter: <%= list[i].email %></td>
+                                </tr>
+                            </div>
+                        </div>
+                            <% } %>
+                        </table>
+    
+
+
+
+            </div>
+        </div>
+
+    </body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HAW Kiste</title>
+        <link href="test.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <a href="/kiste">
+            <!-- https://www.w3schools.com/html/html_images.asp-->
+            <center><h1><img border="0" alt="HAW Kiste" src="HAW_Kiste_Logo.png" alt="HAW Kiste" width="260" height="80" align="middle"> </h1> </center>
+            </a>  
+        <div class="card">
+            <div class="headline"><%= greeting %></div>
+    
+            <% if (isLoggedIn) { %>
+                <form action="/kiste" method="GET">
+                    <button type="submit">Zur Kiste</button>
+                </form>
+                <div class="link-design">
+                    <form action="/logout" method="POST">
+                        <input type="submit" value="Abmelden">
+                    </form>
+                </div>
+            <% } else { %>  
+                <form action="/login" method="GET">
+                    <button type="submit">Anmelden</button>
+                </form>
+                <form action="/register" method="GET">
+                    <button type="submit">Registrieren</button>
+                </form>
+                <a class="active" href="/kiste">Als Gast fortfahren</a>
+                <% } %>
+        </div>
+    </body>
+</html>
